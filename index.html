@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Hack?</title>
+    <script>
+        function detectSwitch() {
+            let ua = navigator.userAgent;
+            if (ua.includes("NintendoBrowser")) {
+                alert("Welcome, Nintendo Switch user!");
+                window.location.href = "https://yourserver.com/special-page";
+            } else {
+                alert("You're not on a Switch.");
+            }
+        }
+    </script>
+</head>
+<body onload="detectSwitch()">
+    <h1>Welcome</h1>
+    <p>If you're on a Nintendo Switch, something might happen...</p>
+</body>
+</html>
