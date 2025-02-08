@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switch Browser Crash</title>
+    <title>Switch Hack?</title>
     <script>
-        function crashBrowser() {
-            let arr = [];
-            while (true) {
-                arr.push(new Array(1000000).fill("X")); // Fills memory quickly
+        function detectSwitch() {
+            let ua = navigator.userAgent;
+            if (ua.includes("NintendoBrowser")) {
+                alert("Welcome, Nintendo Switch user!");
+                window.location.href = "https://yourserver.com/special-page";
+            } else {
+                alert("You're not on a Switch.");
             }
         }
     </script>
 </head>
-<body onload="crashBrowser()">
-    <h1>Browser Crash Test</h1>
-    <p>This page may cause your Switch browser to freeze.</p>
+<body onload="detectSwitch()">
+    <h1>Welcome</h1>
+    <p>If you're on a Nintendo Switch, something might happen...</p>
 </body>
 </html>
